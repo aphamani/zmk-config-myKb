@@ -43,7 +43,7 @@
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  !  |  @  |  #   |  _   |  -   |                   |  +   |  =    |       |      |       |       |
+// |       |     |     |      |  _   |  -   |                   |  +   |  =    |       |      |       |       |
 // |       |     |     |      |      |      |                   |  {   |   }   |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
@@ -59,13 +59,13 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |  ESC  |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |      |      |      |                   |VOL_UP|       |       |      |       |       |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &kp C_SLEEP
+&ESC    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &kp C_SLEEP
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans    &trans &trans &trans  &kp C_BRI_DN  &kp C_BRI_UP                       &kp C_VOL_UP      &kp C_VOL_DN    &kp C_MUTE    &trans   &trans    &trans
 &trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans    &trans   &trans    &trans
