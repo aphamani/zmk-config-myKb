@@ -11,9 +11,7 @@
 
 // Uncomment this block if using RGB
 &led_strip {
-    chain-length = <12>;
-    // chain-length = <35>; // Uncomment if using both per-key and underglow LEDs
-    // chain-length = <29>; // Uncomment if using only per-key LEDs.
+    chain-length = <6>;
 };
 
 
@@ -48,10 +46,10 @@
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans     &trans    &trans    &trans    &trans
-&trans     &trans           &trans            &trans            &trans       &trans                       &trans      &trans   &trans    &trans   &trans    &trans
+&trans     &trans           &trans            &trans            &kp LBKT     &kp RBKT                        &kp LBRC    &kp RBRC   &trans    &trans   &trans    &trans
 &trans     &trans           &trans            &trans            &kp UNDER   &kp MINUS                   &kp KP_PLUS &kp EQUAL  &trans    &trans    &trans   &trans
-&trans     &trans           &trans            &trans            &kp LBKT     &kp RBKT                   &kp LBKT    &kp RBKT   &trans    &trans   &trans    &trans
-                            &trans            &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans    &trans
+&trans     &trans           &trans            &trans            &kp LBKT     &kp RBKT                    &kp LBKT    &kp RBKT   &trans    &trans   &trans    &trans
+                            &trans            &trans            &trans       &trans    &trans   &trans    &kp UARW &kp DARW    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
