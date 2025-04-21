@@ -10,7 +10,14 @@
 
 // Uncomment this block if using RGB
 
-&led_strip { chain-length = <6>; };
+&led_strip_left {
+    chain-length = <6>; // number of LEDs on left half
+};
+
+&led_strip_right {
+    chain-length = <6>; // number of LEDs on right half
+};
+
 
 / {
     macros {
@@ -83,7 +90,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -98,6 +105,7 @@
         };
     };
 
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -110,11 +118,11 @@
             //               |CTRL | ALT  | GUI  | SPACE|  LOWER |  | RCTRL | LARW | DARW  | UARW  | RARW |
 
             bindings = <
-&a_grave       &e_acute    &e_grave      &e_circumflex &u_grave    &c_cedilla                        &kp DEL &trans        &trans     &trans           &trans    &trans
+&a_grave       &e_acute    &e_grave      &e_circumflex &u_grave    &c_cedilla                        &kp DEL &trans        &trans     &trans           &trans    &EQUAL
 &kp PLUS       &kp Q       &kp W         &kp E         &kp R       &kp T                             &kp Y   &kp U         &kp I      &kp O            &kp P     &kp PIPE
-&kp ESC        &bhm LGUI A &bhm LCTRL S  &bhm LALT D   &bhm LSHIFT F &kp G                           &kp H   &bhm RSHIFT J &bhm LALT K &bhm RCTRL L    &bhm RGUI SEMI &kp EQUAL
+&kp ESC        &bhm LGUI A &bhm LCTRL S  &bhm LALT D   &bhm LSHIFT F &kp G                           &kp H   &bhm RSHIFT J &bhm LALT K &bhm RCTRL L    &bhm RGUI SEMI &kp RET
 &kp MINUS      &kp Z       &kp X         &kp C         &kp V       &kp B      &trans      &trans     &kp N   &kp M         &kp COMMA  &kp DOT          &kp FSLH  &kp UNDER
-                           &trans        &kp TAB       &kp BSPC    &lt 2 SPACE &lt 1 RET   &kp RET   &kp SQT &kp GRAVE      &trans     &trans
+                           &trans        &kp EQUAL       &kp TAB    &lt 2 SPACE &lt 1   &kp BKSP   &kp SQT &kp GRAVE      &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
