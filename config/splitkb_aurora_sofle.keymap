@@ -10,7 +10,14 @@
 
 // Uncomment this block if using RGB
 
-&led_strip { chain-length = <12>; };
+&led_strip_left {
+    chain-length = <5>; // number of LEDs on left half
+};
+
+&led_strip_right {
+    chain-length = <5>; // number of LEDs on right half
+};
+
 
 / {
     macros {
