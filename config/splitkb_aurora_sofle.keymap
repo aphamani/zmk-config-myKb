@@ -76,7 +76,6 @@
             bindings = <&kp RA(C)>;
             label = "C_CEDILLA";
         };
-
     };
 
     behaviors {
@@ -84,7 +83,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <170>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -99,7 +98,6 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -112,11 +110,11 @@
             //               |CTRL | ALT  | GUI  | SPACE|  LOWER |  | RCTRL | LARW | DARW  | UARW  | RARW |
 
             bindings = <
-&a_grave       &e_acute    &e_grave      &e_circumflex &u_grave    &c_cedilla                        &kp DEL &trans        &trans     &trans           &trans    &EQUAL
+&a_grave       &e_acute    &e_grave      &e_circumflex &u_grave    &c_cedilla                        &kp DEL &trans        &trans     &trans           &trans    &trans
 &kp PLUS       &kp Q       &kp W         &kp E         &kp R       &kp T                             &kp Y   &kp U         &kp I      &kp O            &kp P     &kp PIPE
-&kp ESC        &bhm LGUI A &bhm LCTRL S  &bhm LALT D   &bhm LSHIFT F &kp G                           &kp H   &bhm RSHIFT J &bhm LALT K &bhm RCTRL L    &bhm RGUI SEMI &kp RET
+&kp ESC        &bhm LGUI A &bhm LCTRL S  &bhm LALT D   &bhm LSHIFT F &kp G                           &kp H   &bhm RSHIFT J &bhm LALT K &bhm RCTRL L    &bhm RGUI SEMI &kp EQUAL
 &kp MINUS      &kp Z       &kp X         &kp C         &kp V       &kp B      &trans      &trans     &kp N   &kp M         &kp COMMA  &kp DOT          &kp FSLH  &kp UNDER
-                           &trans        &kp EQUAL       &kp TAB    &lt 2 SPACE &lt 1 RET  &kp BKSP   &kp SQT &kp GRAVE      &trans     &trans
+                           &trans        &kp TAB       &kp BSPC    &lt 2 SPACE &lt 1 RET   &kp RET   &kp SQT &kp GRAVE      &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
