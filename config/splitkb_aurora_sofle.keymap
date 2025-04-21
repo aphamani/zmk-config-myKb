@@ -34,14 +34,7 @@
             bindings = <&kp LCTRL &kp LEFT_ALT &kp ENTER>;
             label = "FULLSCREEN";
         };
-
-        a_grave: a_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(A)>;
-            label = "A_GRAVE";
-        };
-
+        
         a_grave: a_grave {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
