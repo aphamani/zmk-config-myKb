@@ -10,14 +10,7 @@
 
 // Uncomment this block if using RGB
 
-&led_strip_left {
-    chain-length = <5>; // number of LEDs on left half
-};
-
-&led_strip_right {
-    chain-length = <5>; // number of LEDs on right half
-};
-
+&led_strip { chain-length = <10>; };
 
 / {
     macros {
@@ -121,7 +114,7 @@ c_cedilla: c_cedilla {
 &kp PLUS       &kp Q       &kp W         &kp E         &kp R       &kp T                             &kp Y   &kp U         &kp I      &kp O            &kp P     &kp PIPE
 &kp ESC        &bhm LGUI A &bhm LCTRL S  &bhm LALT D   &bhm LSHIFT F &kp G                           &kp H   &bhm RSHIFT J &bhm LALT K &bhm RCTRL L    &bhm RGUI SEMI &kp RET
 &kp MINUS      &kp Z       &kp X         &kp C         &kp V       &kp B      &trans      &trans     &kp N   &kp M         &kp COMMA  &kp DOT          &kp FSLH  &kp UNDER
-                           &trans        &kp EQUAL       &kp TAB    &lt 2 SPACE &lt 1 SPACE   &kp BSPC   &kp SQT &kp GRAVE      &kp EQUAL     &trans
+                           &trans        &kp EQUAL       &kp TAB    &lt 2 SPACE &lt 1 RET   &kp BSPC   &kp SQT &kp GRAVE      &kp EQUAL     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

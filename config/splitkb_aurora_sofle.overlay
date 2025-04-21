@@ -1,0 +1,13 @@
+&led_strip {
+    chain-length = <10>;          // Adjust this number to your actual LED count
+    brightness = <128>;          // Default brightness (0-255)
+    status = "okay";
+};
+
+backlight {
+    compatible = "zmk,backlight";
+    label = "backlight";
+    led-strip = <&led_strip>;
+    brightness = <128>;
+    status = "okay";
+};
