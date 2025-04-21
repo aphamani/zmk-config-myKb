@@ -10,14 +10,7 @@
 
 // Uncomment this block if using RGB
 
-&led_strip_left {
-    chain-length = <6>; // number of LEDs on left half
-};
-
-&led_strip_right {
-    chain-length = <6>; // number of LEDs on right half
-};
-
+&led_strip { chain-length = <6>; };
 
 / {
     macros {
@@ -43,46 +36,47 @@
         };
 
         a_grave: a_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(A)>;
-            label = "A_GRAVE";
-        };
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp GRAVE &kp A>;  // Compose, `, a
+    label = "A_GRAVE";
+};
 
-        e_acute: e_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(E)>;
-            label = "E_ACUTE";
-        };
+e_acute: e_acute {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp SQT &kp E>;  // Compose, ', e
+    label = "E_ACUTE";
+};
 
-        e_grave: e_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(GRAVE) &kp E>;
-            label = "E_GRAVE";
-        };
+e_grave: e_grave {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp GRAVE &kp E>;  // Compose, `, e
+    label = "E_GRAVE";
+};
 
-        e_circumflex: e_circumflex {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(I) &kp E>;
-            label = "E_CIRCUMFLEX";
-        };
+e_circumflex: e_circumflex {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp CARET &kp E>;  // Compose, ^, e
+    label = "E_CIRCUMFLEX";
+};
 
-        u_grave: u_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(GRAVE) &kp U>;
-            label = "U_GRAVE";
-        };
+u_grave: u_grave {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp GRAVE &kp U>;  // Compose, `, u
+    label = "U_GRAVE";
+};
 
-        c_cedilla: c_cedilla {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(C)>;
-            label = "C_CEDILLA";
-        };
+c_cedilla: c_cedilla {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp RALT &kp COMMA &kp C>;  // Compose, ,, c
+    label = "C_CEDILLA";
+};
+
     };
 
     behaviors {
