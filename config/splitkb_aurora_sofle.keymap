@@ -48,11 +48,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans      &trans       &trans    &trans          &trans                         &trans            &trans                &trans                &trans               &trans         &trans
-&trans  &kp ESCAPE  &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT                    &kp CARET         &kp AMPERSAND         &kp ASTERISK          &hm COLON SEMICOLON  &kp BACKSPACE  &trans
-&trans  &kp TAB     &kp EQUAL    &kp PLUS  &kp MINUS       &kp GRAVE                      &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp PIPE             &kp ENTER      &trans
-&trans  &kp TILDE   &kp EQUAL    &kp PLUS  &kp UNDERSCORE  &trans       &trans    &trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET    &trans         &trans
-                    &trans       &trans    &trans          &trans       &trans    &trans  &trans            &trans                &trans                &trans
+&trans  &trans      &trans       &trans    &trans          &trans                         &trans            &trans                &trans                 &trans               &trans         &trans
+&trans  &kp ESCAPE  &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT                    &kp CARET         &kp AMPERSAND         &kp ASTERISK           &hm COLON SEMICOLON  &kp BACKSPACE  &trans
+&trans  &kp TAB     &kp EQUAL    &kp PLUS  &kp MINUS       &kp GRAVE                      &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE             &kp ENTER      &trans
+&trans  &kp TILDE   &kp EQUAL    &kp PLUS  &kp UNDERSCORE  &trans       &trans    &trans  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET    &trans         &trans
+                    &trans       &trans    &trans          &trans       &trans    &trans  &trans            &trans                &trans                 &trans
             >;
         };
 
